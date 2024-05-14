@@ -2,7 +2,7 @@
 
 ## Live Demo
 
-Check out the live site [here](https//www.julianorth.de).
+Check out the live site [here](https://www.julianorth.de).
 
 ![Screenshot of Landingpage from julianorth.de](https://raw.githubusercontent.com/jukoor/julianorth.de-2020/main/src/assets/images/julianorth_landingpage_screenshot.png)
 
