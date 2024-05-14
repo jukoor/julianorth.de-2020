@@ -1,0 +1,201 @@
+/* Purpose: julianorth.de global css file */
+/* Author: Julian Orth */
+/* Created: 24.05.2019 */
+/* === FONTS === */
+@import url('https://fonts.googleapis.com/css2?family=Cardo&family=Poppins:ital,wght@0,200;0,300;0,400;0,600;0,800;1,300&display=swap');
+
+/* === /FONTS === */
+/* === BASIC === */
+:root {
+	--blue: #327d9a;
+	--grey-dark: #212121;
+	--grey-light: #eaedf1;
+	--bp-xsmall: 560px;
+	/* 35em */
+	--bp-small: 688px;
+	/* 43em */
+	--bp-medium: 992px;
+	/* 62em */
+	--bp-large: 1440px;
+	/* 90em */
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+:focus {
+	outline: none;
+}
+
+::-moz-focus-inner {
+	border: 0;
+}
+
+body,
+html {
+	min-height: 100%;
+}
+
+html {
+	font-size: 100%;
+}
+
+body {
+	overflow-x: hidden;
+	font-family: 'Poppins', Arial, sans-serif;
+	background: var(--grey-dark);
+	color: #fff;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	font-weight: normal;
+}
+
+div {
+	position: relative;
+}
+
+/* === /BASIC === */
+/* === SECTION === */
+.section {
+	height: auto;
+	position: relative;
+}
+
+.section__block {
+	position: relative;
+}
+
+.section__block--padded {
+	margin: 0 auto;
+	max-width: 100rem;
+	min-width: 300px;
+	padding: 4rem 1.5rem;
+}
+
+.section__block--fullscreen {
+	height: 95vh;
+	width: 100vw;
+	max-width: 100rem;
+}
+
+.section__block--darkgrey {
+	background: var(--grey-dark);
+	transition: background-color 0.5s ease-in-out;
+}
+
+.section__block--lightgrey::after {
+	background-color: #eaedf1;
+	bottom: 0;
+	content: "";
+	display: block;
+	height: 100%;
+	left: 0;
+	opacity: 0.9;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 100%;
+	z-index: -1;
+}
+
+.section__block--center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.sol .section__block--darkgrey {
+	/* background: #e2e0e0; */
+}
+
+.desktop_only {
+	display: none !important;
+}
+
+.noscroll {
+	overflow-y: hidden !important;
+}
+
+/* === KEYFRAMES === */
+@keyframes fade-in {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes rotate-in {
+	0% {
+		opacity: 0;
+		transform: rotateY(90deg);
+	}
+
+	100% {
+		opacity: 1;
+		transform: rotateY(0);
+	}
+}
+
+@keyframes pulse-opacity {
+	0% {
+		opacity: 1;
+	}
+
+	50% {
+		opacity: 0.3;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+/* === /KEYFRAMES === */
+/* === RESPONSIVE === */
+@media only screen and (device-width : 375px) and (device-height : 812px) and (-webkit-device-pixel-ratio : 3) {
+	.section__block--fullscreen {
+		height: 90vh;
+	}
+}
+
+@media only screen and (device-width : 414px) and (device-height : 896px) and (-webkit-device-pixel-ratio : 2) {
+	.section__block--fullscreen {
+		height: 90vh;
+	}
+}
+
+@media screen and (min-width: 688px) {
+	.section__block--padded {
+		padding: 5rem 5rem 6vw;
+	}
+}
+
+@media screen and (min-width: 992px) {
+	.section__block--padded {
+		padding: 5rem 5rem 3rem;
+	}
+
+	.section__block--fullscreen {
+		height: 100vh;
+	}
+}
+
+@media screen and (min-width: 1440px) {
+	.section__block--padded {
+		padding-bottom: 5rem;
+	}
+}
+
+/* === /RESPONSIVE === */
